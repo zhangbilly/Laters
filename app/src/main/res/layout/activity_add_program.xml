@@ -1,0 +1,100 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.zworks.up2date.AddProgramActivity" >
+
+    <EditText
+        android:id="@+id/programName"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/program_hint"
+        android:imeOptions="flagNoExtractUi"
+        android:inputType="text"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/selectweek"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:onClick="showWeekDialog"
+        android:text="@string/hint_selectweek" />
+
+    <TextView
+        android:id="@+id/selectedweek"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/hint_selectedweek"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/selectbegindate"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:onClick="showBeginDateDialog"
+        android:text="@string/hint_selectbegindate" />
+
+    <TextView
+        android:id="@+id/selectedbegindate"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/hint_selectedbegindate"
+        android:textSize="20sp" />
+        <TextView
+        android:id="@+id/selectdaysdelay"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/hint_selectdaysdelay"
+        android:textSize="20sp" />
+
+    <NumberPicker
+        android:id="@+id/daysdelay_num_picker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        
+        android:orientation="horizontal"
+        
+        />
+
+    <TextView
+        android:id="@+id/selectrecordtype"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/hint_selectrecordtype"
+        android:textSize="20sp" />
+
+    <RadioGroup
+        android:id="@+id/radioRecordType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/radioDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/radio_date" />
+
+        <RadioButton
+            android:id="@+id/radioEpisode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/radio_episode" />
+
+        <RadioButton
+            android:id="@+id/radioBoth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/radio_both" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/addprogram"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:onClick="addProgram"
+        android:text="@string/label_add_program" />
+
+</LinearLayout>
